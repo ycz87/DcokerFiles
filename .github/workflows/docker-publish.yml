@@ -54,7 +54,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           flavor: |
-            latest=auto
+            latest=true
           tags: |
             type=ref,event=branch
             type=edge,enable=true,prefix='edge',suffix=,branch=$repo.default_branch
