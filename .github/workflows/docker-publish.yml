@@ -54,6 +54,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
+            # default
             type=ref,event=branch
             # minimal
             type=schedule
