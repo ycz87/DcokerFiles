@@ -54,11 +54,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            # default
             type=ref,event=branch
-            # minimal
             type=schedule
-            # handlebars
             type=schedule,pattern={{date 'YYYYMMDD'}}
 
       # Build and push Docker image with Buildx (don't push on PR)
