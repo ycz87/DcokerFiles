@@ -55,7 +55,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=branch
-            type=schedule
+            type=edge,enable=true,prefix='edge',suffix=,branch=$repo.default_branch
             type=schedule,pattern={{date 'YYYYMMDD'}}
 
       # Build and push Docker image with Buildx (don't push on PR)
