@@ -21,7 +21,7 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   # IMAGE_NAME: ${{ github.repository }}
-  IMAGE_NAME: ycz87/php
+  IMAGE_NAME: ycz87/php-fpm-alpine-exts
 
 
 jobs:
