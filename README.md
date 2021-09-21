@@ -1,4 +1,4 @@
-# PHP-FPM-with-EXTs-DockerFile
+# PHP-FPM-Alpine-EXTs-DockerFile
 # Docker Hub
 https://hub.docker.com/r/ycz87/php-fpm-alpine-exts
 
