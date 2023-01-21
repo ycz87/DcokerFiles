@@ -76,7 +76,7 @@ RUN install-php-extensions solr
 RUN install-php-extensions spx
 RUN install-php-extensions ssh2
 RUN install-php-extensions stomp
-RUN install-php-extensions swoole
+#RUN install-php-extensions swoole
 RUN install-php-extensions sysvmsg
 RUN install-php-extensions sysvsem
 RUN install-php-extensions sysvshm
