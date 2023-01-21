@@ -28,7 +28,7 @@ RUN install-php-extensions gnupg
 RUN install-php-extensions grpc
 RUN install-php-extensions http
 RUN install-php-extensions igbinary
-RUN install-php-extensions imagick
+#RUN install-php-extensions imagick
 RUN install-php-extensions imap
 RUN install-php-extensions inotify
 RUN install-php-extensions intl
