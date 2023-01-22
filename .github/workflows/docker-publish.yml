@@ -6,8 +6,8 @@ on:
       - "main"
 
 jobs:
-  _work:
-    runs-on: self-hosted 
+  Docker:
+    runs-on: ubuntu-latest
     steps:
       -
         name: Checkout
