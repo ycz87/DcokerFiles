@@ -5,6 +5,9 @@ on:
 #  push:
 #    branches:
 #      - "main"
+
+env:
+  DAY_OF_WEEK: Monday
   
 jobs:
   Docker:
@@ -39,4 +42,4 @@ jobs:
             type=schedule,pattern={{date 'YYYYMMDD'}}
       -
         name: Test
-        run: echo "$CurrentDate"
+        run: echo "$CurrentDate $DAY_OF_WEEK $date.CurrentDate"
