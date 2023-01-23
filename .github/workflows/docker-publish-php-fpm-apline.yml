@@ -24,10 +24,10 @@ jobs:
           images: docker.io/ycz87/php-fpm-with-common-exts
           flavor: |
             latest=true
-            tags: |
-              # minimal
-              type=schedule
-              # default
-              type=schedule,pattern=nightly
-              # handlebars
-              type=schedule,pattern={{date 'YYYYMMDD'}}
+          tags: |
+            # minimal
+            type=schedule
+            # default
+            type=schedule,pattern=nightly
+            # handlebars
+            type=schedule,pattern={{date 'YYYYMMDD'}}
