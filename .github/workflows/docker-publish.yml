@@ -21,6 +21,8 @@ jobs:
         with:
           # List of Docker images to use as base name for tags
           images: docker.io/ycz87/php-fpm-alpine-exts
+          flavor: |
+            latest=true
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
