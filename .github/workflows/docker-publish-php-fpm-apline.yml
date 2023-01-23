@@ -39,4 +39,4 @@ jobs:
             type=schedule,pattern={{date 'YYYYMMDD'}}
       -
         name: Test
-        run: echo {{CurrentDate}}
+        run: echo "$CurrentDate"
