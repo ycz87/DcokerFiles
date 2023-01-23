@@ -40,9 +40,11 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: Dockerfile_php-fpm
+          file: Dockerfile-php-fpm
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            fpm-${{ steps.meta.outputs.tags }}
+            user/app:fpm
           labels: ${{ steps.meta.outputs.labels }}
