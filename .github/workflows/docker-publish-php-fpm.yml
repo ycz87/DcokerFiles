@@ -1,9 +1,10 @@
 name: PHP-FPM-EXTs-Docker
 
 on:
-  push:
-    branches:
-      - "main"
+  workflow_dispatch:
+#  push:
+#    branches:
+#      - "main"
 
 jobs:
   Docker:
