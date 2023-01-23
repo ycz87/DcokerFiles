@@ -7,7 +7,7 @@ on:
 #      - "main"
 
 env:
-  DAY_OF_WEEK: Monday
+  DAY_OF_WEEK: "2000-01-01"
   
 jobs:
   Docker:
@@ -42,4 +42,6 @@ jobs:
             type=schedule,pattern={{date 'YYYYMMDD'}}
       -
         name: Test
-        run: echo "$CurrentDate $DAY_OF_WEEK $date.CurrentDate"
+        run: |
+          echo "$CurrentDate $DAY_OF_WEEK $date.CurrentDate"
+          echo ${{ steps.date.outputs }}
