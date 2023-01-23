@@ -6,9 +6,7 @@ on:
 #    branches:
 #      - "main"
 
-env:
-  DAY_OF_WEEK: "2000-01-01"
-  
+
 jobs:
   Docker:
     runs-on: ubuntu-latest
@@ -19,7 +17,7 @@ jobs:
       - 
         name: Get current date
         id: date
-        run: echo "{date}={$(date +'%Y-%m-%d')}" >> $GITHUB_OUTPUT
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
       - 
         name: Docker Metadata action
         id: meta
