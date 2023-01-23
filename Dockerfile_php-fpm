@@ -1,10 +1,9 @@
 FROM php:fpm
-RUN pecl install imagick \
-    && docker-php-ext-enable imagick
+
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/install-php-extensions
-RUN install-php-extensions amqp
+#RUN install-php-extensions amqp
 ##RUN install-php-extensions apcu
 ###RUN install-php-extensions ast
 #RUN install-php-extensions bcmath
@@ -29,7 +28,7 @@ RUN install-php-extensions amqp
 ###RUN install-php-extensions grpc
 #RUN IPE_ICU_EN_ONLY=1 install-php-extensions http
 ###RUN install-php-extensions igbinary
-####RUN install-php-extensions imagick
+RUN install-php-extensions imagick
 ##RUN install-php-extensions imap
 ###RUN install-php-extensions inotify
 #RUN IPE_ICU_EN_ONLY=1 install-php-extensions intl
