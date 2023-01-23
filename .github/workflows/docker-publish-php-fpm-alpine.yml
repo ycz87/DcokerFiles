@@ -1,4 +1,4 @@
-name: PHP-FPM-APLINE-EXTs-Docker
+name: PHP-FPM-ALPINE-EXTs-Docker
 
 on:
   workflow_dispatch:
@@ -52,11 +52,11 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: Dockerfile-php-fpm-apline
+          file: Dockerfile-php-fpm-alpine
           context: .
           platforms: linux/amd64,linux/arm64,
           push: true
           tags: |
-            docker.io/ycz87/php-fpm-with-common-exts:fpm-apline-latest
-            docker.io/ycz87/php-fpm-with-common-exts:fpm-apline-${{ steps.date.outputs.date }}
+            docker.io/ycz87/php-fpm-with-common-exts:fpm-alpine-latest
+            docker.io/ycz87/php-fpm-with-common-exts:fpm-alpine-${{ steps.date.outputs.date }}
           labels: ${{ steps.meta.outputs.labels }}
