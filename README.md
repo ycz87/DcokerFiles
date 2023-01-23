@@ -14,4 +14,5 @@ PHP EXTs from https://github.com/mlocati/docker-php-extension-installer with
 docker pull ycz87/php-fpm-with-common-exts
 
 >:fpm-latest and :main is the latest php-fpm with extensions above
+>
 >:fpm-alpine-latest is the latest php-fpm-alpine with extensions above
