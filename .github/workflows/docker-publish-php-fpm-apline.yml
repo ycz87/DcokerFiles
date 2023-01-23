@@ -1,4 +1,4 @@
-name: PHP-FPM-EXTs-Docker
+name: PHP-FPM-APLINE-EXTs-Docker
 
 on:
   workflow_dispatch:
