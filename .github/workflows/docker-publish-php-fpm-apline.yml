@@ -5,8 +5,6 @@ on:
 #  push:
 #    branches:
 #      - "main"
-env:
-  CurrentDate: Monday
   
 jobs:
   Docker:
@@ -22,7 +20,7 @@ jobs:
         with:
           args: date +%F
         env:
-          CurrentDate: nightly-tag-${{ steps.date.outputs.date }}
+          CurrentDate: nightly-tag-${{ steps.date.outputs }}
       - 
         name: Docker Metadata action
         id: meta
@@ -39,3 +37,6 @@ jobs:
             type=edge,enable=true,priority=700,prefix=,suffix=,branch=main
             # handlebars
             type=schedule,pattern={{date 'YYYYMMDD'}}
+      -
+        name: Test
+        run: echo {{CurrentDate}}
