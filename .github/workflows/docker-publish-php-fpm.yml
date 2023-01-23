@@ -45,6 +45,6 @@ jobs:
           platforms: linux/amd64,linux/arm64,
           push: true
           tags: |
-            fpm-${{ steps.meta.outputs.tags }}
-            user/app:fpm
+            ${{ steps.meta.outputs.tags }}
+            docker.io/ycz87/php-fpm-with-common-exts:fpm-latest
           labels: ${{ steps.meta.outputs.labels }}
